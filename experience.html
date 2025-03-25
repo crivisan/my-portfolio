@@ -62,7 +62,7 @@
   </header>
 
   <main class="experience-container">
-    <h1>Professional Experience</h1>
+    <h1>Work Experience</h1>
     
     <section class="timeline">
       <div class="timeline-item">
@@ -91,24 +91,58 @@
           <p>Conducted CNN benchmark studies for concrete spalling detection and dataset preprocessing.</p>
         </div>
       </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h2>Geología Ambiental & Económica</h2>
+          <p><strong>Mar 2017 – Apr 2017</strong></p>
+          <p>Performed structural geological data collection and analysis for environmental assessments.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h2>CIPAT Research Center, Ecuador</h2>
+          <p><strong>2016 – 2019</strong></p>
+          <p>Conducted fieldwork and data processing for water management projects, including terrain data acquisition via drones and GPS.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h2>Freelancer</h2>
+          <p><strong>2016 – Present</strong></p>
+          <p>Provided GIS and drone mapping training, hydrology analysis, NDVI calculations, and volume estimations.</p>
+        </div>
+      </div>
     </section>
 
-    <h2>Walking around the world</h2>
+    <h2>My GIS & AI Journey</h2>
     <p>The map below highlights locations where I have worked, given talks, or attended research conferences.</p>
-    <div id="map" style="height: 400px; margin-top: 1rem;"></div>
+    <div id="map" style="height: 500px; width: 80%; margin-auto: 1rem;"></div>
 
     <script>
       var map = L.map('map').setView([0, 0], 2);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '© CartoDB'
       }).addTo(map);
 
       var locations = [
-        { lat: 49.0139, lon: 8.4043, title: "DFKI - Research Position", type: "work", color: "blue" },
+        { lat: 49.4431, lon: 7.7684, title: "DFKI - Research Position", type: "work", color: "blue" },
+        { lat: 49.1125, lon: 9.7350, title: "ViNNOVA - Junior Deep Learning Engineer", type: "work", color: "blue" },
+        { lat: -2.1709, lon: -79.9224, title: "CIPAT - Research Center", type: "work", color: "blue" },
+        { lat: 14.6349, lon: -90.5069, title: "Geología Ambiental - Internship", type: "work", color: "blue" },
+        { lat: -2.1709, lon: -79.9224, title: "ESPOL - BSc Studies", type: "education", color: "red" },
         { lat: 48.7758, lon: 9.1829, title: "HFT Stuttgart - MSc Studies", type: "education", color: "red" },
-        { lat: -2.1709, lon: -79.9224, title: "ESPOL University - BSc Studies", type: "education", color: "red" },
-        { lat: 50.1109, lon: 8.6821, title: "IGARSS Conference 2023", type: "conference", color: "green" },
-        { lat: 48.8566, lon: 2.3522, title: "Research Workshop in Paris", type: "conference", color: "green" }
+        { lat: 34.4208, lon: -119.6982, title: "Santa Barbara - English Language Course", type: "education", color: "red" },
+        { lat: 41.8781, lon: -87.6298, title: "Chicago - English Language Course", type: "education", color: "red" },
+        { lat: 34.1478, lon: -118.1445, title: "Pasadena - IGARSS 2023 Presenter", type: "conference", color: "green" },
+        { lat: 37.3833, lon: -5.9800, title: "Almaden - Conference Presenter", type: "conference", color: "green" },
+        { lat: 38.1157, lon: 15.6411, title: "Benevento - IADF Summer School", type: "conference", color: "green" },
+        { lat: 37.9838, lon: 23.7275, title: "Athens - IGARSS 2024 Presenter", type: "conference", color: "green" }
       ];
 
       locations.forEach(loc => {
