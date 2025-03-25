@@ -47,6 +47,25 @@
       border-radius: 50%;
       transform: translateX(-50%);
     }
+    h1, h2 {
+      text-align: center;
+    }
+    .map-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      }
+    #map {
+      height: 500px;
+      width: 100%;
+      max-width: 800px;
+      border-radius: 8px;
+    }
+    .map-description {
+      text-align: center;
+      font-size: 1.1rem; /* Optional: Adjust font size */
+      margin-bottom: 1rem; /* Optional: Adds spacing below */
+    }
   </style>
 </head>
 <body>
@@ -56,13 +75,18 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="experience.html" class="active">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="experience-container">
-    <h1>Work Experience</h1>
+    <section class="mini-hero">
+      <div class="mini-hero-content">
+        <h1>Work Experience</h1>
+        <p>Innovating with GIS & AI Across the Globe</p>
+      </div>
+    </section>
     
     <section class="timeline">
       <div class="timeline-item">
@@ -120,9 +144,13 @@
       </div>
     </section>
 
-    <h2>My GIS & AI Journey</h2>
-    <p>The map below highlights locations where I have worked, given talks, or attended research conferences.</p>
-    <div id="map" style="height: 500px; width: 80%; margin-auto: 1rem;"></div>
+    <h2>"Exploring the World Through GIS & AI"</h2>
+    <p class="map-description">
+      The map below highlights locations where I have worked, given talks, or attended research conferences.
+    </p>    
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
 
     <script>
       var map = L.map('map').setView([0, 0], 2);
