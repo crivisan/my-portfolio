@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flood Inference Plugin - Portfolio</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="mini-hero">
+    <div class="mini-hero-content">
+      <h1>Flood Inference Plugin</h1>
+      <p>AI-powered flood prediction, fully integrated with QGIS.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="portfolio-detail-container">
+
+    <!-- Overview Section -->
+    <section class="overview">
+      <h2>Overview</h2>
+      <p>
+        <strong>Flood Inference Plugin</strong> is a QGIS tool that leverages deep learning 
+        to provide real-time flood predictions. Designed for urban planning and disaster response, 
+        it simplifies flood risk assessment by automating complex workflows.
+      </p>
+    </section>
+
+    <!-- Features & How It Works Section (Two-Column Layout) -->
+    <section class="plugin-details">
+      <div class="plugin-column">
+        <h2>Features</h2>
+        <div class="feature-card">
+          <h3>AI Flood Prediction</h3>
+          <p>Runs a PyTorch-based model on DEM & rainfall data for rapid flood analysis.</p>
+        </div>
+        <div class="feature-card">
+          <h3>User-Friendly Interface</h3>
+          <p>Simple GUI allows users to configure parameters and visualize results effortlessly.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Automated Visualization</h3>
+          <p>Applies intelligent color mapping to generated flood depth maps in QGIS.</p>
+        </div>
+      </div>
+
+      <div class="plugin-column">
+        <h2>How It Works</h2>
+        <div class="process-step">
+          <span>1️⃣</span> <p>Load a DEM and select a rainfall scenario.</p>
+        </div>
+        <div class="process-step">
+          <span>2️⃣</span> <p>Preprocess data, normalize values, and extract terrain features.</p>
+        </div>
+        <div class="process-step">
+          <span>3️⃣</span> <p>Run the AI model and generate a flood depth map.</p>
+        </div>
+        <div class="process-step">
+          <span>4️⃣</span> <p>Automatically display results as a GeoTIFF layer in QGIS.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="portfolio-images">
+        <h2>Plugin Screenshots</h2>
+        <div class="image-gallery">
+        <a href="assets/plugin-screenshot1.png" class="lightbox">
+            <img src="assets/plugin-screenshot1.png" alt="Plugin Screenshot 1">
+        </a>
+        <a href="assets/plugin-screenshot2.png" class="lightbox">
+            <img src="assets/plugin-screenshot2.png" alt="Plugin Screenshot 2">
+        </a>
+        </div>
+    </section>
+    
+    <!-- Lightbox Container (Initially Hidden) -->
+    <div id="lightbox">
+        <span id="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Expanded Screenshot">
+    </div>
+
+    <!-- Video Section
+    <section class="video-demo">
+      <h2>Demo Video</h2>
+      <p>Watch the plugin in action:</p>
+      <video controls>
+        <source src="assets/plugin-demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+     -->
+
+    <!-- Contact Section -->
+    <section class="contact-info">
+      <h2>Want to Know More?</h2>
+      <p>Contact me for more details about the <strong>Flood Inference Plugin</strong>.</p>
+      <a href="mailto:your.email@domain.com" class="contact-btn">Email Me</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cristhian Sanchez</p>
+  </footer>
+</body>
+</html>
+
+
+<script>
+    document.querySelectorAll(".lightbox").forEach(item => {
+      item.addEventListener("click", event => {
+        event.preventDefault();
+        document.getElementById("lightbox-img").src = item.href;
+        document.getElementById("lightbox").style.display = "flex";
+      });
+    });
+  
+    document.getElementById("close-lightbox").addEventListener("click", () => {
+      document.getElementById("lightbox").style.display = "none";
+    });
+</script>
+  
