@@ -34,17 +34,17 @@
     </p>
 
     <h2>Challenges</h2>
-    <p>
-      Raw yield maps often contain systematic errors, such as:
-      - GPS inaccuracies leading to positional shifts.
-      - Delayed yield registration, causing mismatched spatial locations.
-      - Speed fluctuations and cutting width inconsistencies, affecting reported yield values.
-    </p>
+    <p>Raw yield maps often contain systematic errors, such as:</p>
+    <ul>
+      <li>GPS inaccuracies leading to positional shifts.</li>
+      <li>Delayed yield registration, causing mismatched spatial locations.</li>
+      <li>Speed fluctuations and cutting width inconsistencies, affecting reported yield values.</li>
+    </ul>
     <p>
       These challenges introduce noise in machine learning models, reducing their ability to make reliable predictions at the sub-field scale.
     </p>
 
-    <h2>Our Solution: Multi-Stage Data Cleaning Pipeline</h2>
+    <h2>Multi-Stage Data Cleaning Pipeline</h2>
     <p>We developed a comprehensive pipeline for outlier detection and yield data cleaning, which includes:</p>
 
     <div class="plugin-details">
@@ -72,12 +72,12 @@
     </div>
 
     <h2>Key Findings</h2>
-    <p>
-      Our study found that:
-      - For field-level yield predictions, simple regional thresholding was sufficient.
-      - For sub-field level yield predictions, advanced techniques such as IQR-based statistical filtering and Spatio-Temporal cleaning provided the best results.
-      - The most computationally expensive methods, like advanced Spatio-Temporal filtering, improved prediction accuracy but were not always necessary.
-    </p>
+    <p>Our study found that:</p>
+    <ul>
+      <li>For field-level yield predictions, simple regional thresholding was sufficient.</li>
+      <li>For sub-field level yield predictions, advanced techniques such as IQR-based statistical filtering and Spatio-Temporal cleaning provided the best results.</li>
+      <li>The most computationally expensive methods, like advanced Spatio-Temporal filtering, improved prediction accuracy but were not always necessary.</li>
+    </ul>
 
     <h2>Publication</h2>
     <p>

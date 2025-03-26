@@ -393,3 +393,14 @@ footer p {
   color: white;
   cursor: pointer;
 }
+
+
+ul {
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+  list-style-type: square; /* Default bullet points */
+}
+
+ul li {
+  margin-bottom: 0.5rem; /* Adds space between bullet points */
+}
