@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Outlier Detection in Yield Maps - Portfolio</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="mini-hero">
+    <div class="mini-hero-content">
+      <h1>Outlier Detection in Yield Maps</h1>
+      <p>Improving sub-field yield predictions through automated data harmonization and cleaning.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="portfolio-detail-container">
+
+    <h2>Overview</h2>
+    <p>
+      Modern combine harvesters collect real-time, geo-located yield data during harvesting.
+      However, these yield maps often contain measurement errors due to sensor noise, positional inaccuracies, and data transmission delays.
+      Cleaning this data is crucial for training accurate machine learning models for sub-field level yield prediction.
+    </p>
+
+    <h2>Challenges</h2>
+    <p>
+      Raw yield maps often contain systematic errors, such as:
+      - GPS inaccuracies leading to positional shifts.
+      - Delayed yield registration, causing mismatched spatial locations.
+      - Speed fluctuations and cutting width inconsistencies, affecting reported yield values.
+    </p>
+    <p>
+      These challenges introduce noise in machine learning models, reducing their ability to make reliable predictions at the sub-field scale.
+    </p>
+
+    <h2>Our Solution: Multi-Stage Data Cleaning Pipeline</h2>
+    <p>We developed a comprehensive pipeline for outlier detection and yield data cleaning, which includes:</p>
+
+    <div class="plugin-details">
+      <div class="plugin-column">
+        <div class="feature-card">
+          <h3>Data Harmonization</h3>
+          <p>Standardized unit conversions, header translations, and projection transformations across datasets.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Regional Thresholding</h3>
+          <p>Applied agronomic domain knowledge to filter out physically unrealistic yield values.</p>
+        </div>
+      </div>
+
+      <div class="plugin-column">
+        <div class="feature-card">
+          <h3>Statistical Outlier Detection</h3>
+          <p>Used Three-Sigma Rule & Inter-Quartile Range (IQR) methods to detect anomalies in yield values.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Spatio-Temporal Filtering</h3>
+          <p>Applied DBSCAN-based clustering to detect and correct spatial inconsistencies.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Key Findings</h2>
+    <p>
+      Our study found that:
+      - For field-level yield predictions, simple regional thresholding was sufficient.
+      - For sub-field level yield predictions, advanced techniques such as IQR-based statistical filtering and Spatio-Temporal cleaning provided the best results.
+      - The most computationally expensive methods, like advanced Spatio-Temporal filtering, improved prediction accuracy but were not always necessary.
+    </p>
+
+    <h2>Publication</h2>
+    <p>
+      This research was presented at IGARSS 2023 - IEEE International Geoscience and Remote Sensing Symposium.<br>
+      📄 <a href="https://ieeexplore.ieee.org/document/10282955" target="_blank">Read the Full Paper</a>
+    </p>
+
+    <!-- Screenshots -->
+    <h2>Sample Yield Maps</h2>
+    <div class="image-gallery">
+      <a href="assets/paper-screenshot1.png" class="lightbox">
+        <img src="assets/paper-screenshot1.png" alt="Before & After Cleaning">
+      </a>
+      <a href="assets/paper-screenshot2.png" class="lightbox">
+        <img src="assets/paper-screenshot2.png" alt="Workflow Overview">
+      </a>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-info">
+      <h2>Want to Know More?</h2>
+      <p>Feel free to reach out for details or collaboration opportunities.</p>
+      <a href="mailto:crivisan1994@gmail.com" class="contact-btn">Email Me</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cristhian Sanchez</p>
+  </footer>
+</body>
+</html>
