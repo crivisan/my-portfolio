@@ -404,3 +404,79 @@ ul {
 ul li {
   margin-bottom: 0.5rem; /* Adds space between bullet points */
 }
+
+
+/**************************************
+  Portfolio Detail Page (Individual Project)
+**************************************/
+.portfolio-detail-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Two-Column Layout for details (if desired) */
+.plugin-details {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.plugin-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.feature-card,
+.process-step {
+  background: #f8f9fa;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* For numbering steps in the workflow */
+.process-step span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-right: 10px;
+}
+
+/* Example images or screenshots */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.image-gallery img {
+  width: 45%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact/CTA styling */
+.contact-info {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.contact-btn:hover {
+  background: var(--secondary);
+}

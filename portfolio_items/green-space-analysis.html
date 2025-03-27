@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Green Space Analysis - Portfolio</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="mini-hero">
+    <div class="mini-hero-content">
+      <h1>Green Space Analysis</h1>
+      <p>NDVI-based vegetation coverage for French cadastral parcels.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="portfolio-detail-container">
+
+    <!-- Overview Section -->
+    <section class="overview">
+      <h2>Overview</h2>
+      <p>
+        This project analyzes the proportion of green spaces within French property parcels by using
+        cadastral data (Edigeo / DXF) and satellite imagery. Using Python, rasterio, and geopandas,
+        we calculate parcel-by-parcel NDVI (Normalized Difference Vegetation Index) to determine
+        the percentage of vegetation.
+      </p>
+    </section>
+
+    <!-- Features & How It Works Section (Two-Column Layout) -->
+    <section class="plugin-details">
+      <div class="plugin-column">
+        <h2>Key Features</h2>
+        <div class="feature-card">
+          <h3>Parcel Extraction</h3>
+          <p>
+            Utilizing Edigeo to produce georeferenced parcel polygons. Optionally supports DXF if
+            CRS alignment is resolved.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>NDVI Computation</h3>
+          <p>
+            Harness near-infrared satellite imagery to compute NDVI and classify vegetation.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Parcel Masking</h3>
+          <p>
+            Use rasterio.mask to overlay each parcel polygon onto the NDVI raster, calculating
+            green coverage.
+          </p>
+        </div>
+      </div>
+
+      <div class="plugin-column">
+        <h2>Workflow</h2>
+        <div class="process-step">
+          <span>1️⃣</span> <p>Convert Edigeo data to a georeferenced Shapefile or GeoPackage.</p>
+        </div>
+        <div class="process-step">
+          <span>2️⃣</span> <p>Load and reproject satellite imagery to match parcel CRS.</p>
+        </div>
+        <div class="process-step">
+          <span>3️⃣</span> <p>Calculate NDVI from Red & NIR bands.</p>
+        </div>
+        <div class="process-step">
+          <span>4️⃣</span> <p>Clip the NDVI raster by each parcel polygon to compute vegetation %.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="portfolio-images">
+      <h2>Plugin Screenshots</h2>
+      <div class="image-gallery">
+      <a href="assets/greenspace_screenshot1.png" class="lightbox">
+          <img src="assets/greenspace_screenshot1.png" alt="Plugin Screenshot 1">
+      </a>
+      <a href="assets/greenspace_screenshot2.png" class="lightbox">
+          <img src="assets/greenspace_screenshot2.png" alt="Plugin Screenshot 2">
+      </a>
+      </div>
+    </section>
+
+    <!-- Limitations & Documentation -->
+    <section class="overview">
+      <h2>Documentation & Limitations</h2>
+      <ul>
+        <li>
+          <strong>CRS Alignment:</strong> Edigeo data typically uses Lambert-93
+          (IGNF:LAMB93/EPSG:2154). Ensure the raster is reprojected accordingly.
+        </li>
+        <li>
+          <strong>NDVI Thresholds:</strong> A threshold (~0.2) is used to classify vegetation.
+          Different thresholds can yield different results.
+        </li>
+        <li>
+          <strong>Seasonal Variation:</strong> NDVI depends on the time of year the imagery was
+          captured. Cloud cover can skew results.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-info">
+      <h2>More Info</h2>
+      <p>
+        Interested in the full code or want to discuss a similar project? Let's connect!
+      </p>
+      <a href="mailto:crivisan1994@gmail.com" class="contact-btn">Email Me</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
+</body>
+</html>
