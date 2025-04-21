@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UrbanMatrix QGIS Plugin - Portfolio</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="mini-hero">
+    <div class="mini-hero-content">
+      <h1>UrbanMatrix - A QGIS Plugin</h1>
+      <p>Spatial classification using the Matrix Method, built for urban & environmental analysis.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="portfolio-detail-container">
+
+    <h2>Overview</h2>
+    <p>
+      <strong>UrbanMatrix</strong> is a plugin for QGIS that brings automation and structure to the Matrix Method, a technique used for environmental and urban classification. It enables users to assess building density and other spatial indicators through a user-friendly interface, integrating real geospatial data and applying a customizable classification pipeline.
+    </p>
+
+    <h2>Features</h2>
+    <div class="plugin-details">
+      <div class="plugin-column">
+        <div class="feature-card">
+          <h3>📐 Grid Generation</h3>
+          <p>Create analysis grids from any raster or map extent.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🏙️ Building Footprint Integration</h3>
+          <p>Download and analyze Microsoft building footprints.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🎨 Auto Styling</h3>
+          <p>Applies intuitive styling to grid and building layers.</p>
+        </div>
+      </div>
+
+      <div class="plugin-column">
+        <div class="feature-card">
+          <h3>🧮 Matrix Method Logic</h3>
+          <p>Classify risk levels (Low, Moderate, High, NoData) based on spatial coverage.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔄 GUI-Driven Workflow</h3>
+          <p>Run the full analysis via an intuitive QGIS interface.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🧠 Python + QGIS</h3>
+          <p>Built using PyQt, PyQGIS, and GeoPandas.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>How It Works</h2>
+    <ol>
+      <li>The user selects a raster or map area and generates a custom grid.</li>
+      <li>Buildings can be downloaded or imported to run automated spatial analysis.</li>
+      <li>Each grid cell is classified based on coverage percentage.</li>
+      <li>The plugin assigns a risk score using Matrix Method logic.</li>
+      <li>Results are automatically visualized and ready to export.</li>
+    </ol>
+
+    <h2>Resources</h2>
+    <ul>
+      <li>🔗 <a href="https://plugins.qgis.org/plugins/urbanmatrix/" target="_blank">UrbanMatrix on QGIS Plugin Repository</a></li>
+      <li>💻 <a href="https://github.com/crivisan/urbanmatrix" target="_blank">GitHub Repository</a></li>
+      <li>📽️ <a href="https://youtu.be/xgnYrgwS6Fc" target="_blank">Demo Video</a></li>
+    </ul>
+
+    <!-- Optional Screenshots -->
+    <h2>Screenshots</h2>
+    <div class="image-gallery">
+      <a href="assets/urbanmatrix1.png" class="lightbox">
+        <img src="assets/urbanmatrix1.png" alt="UrbanMatrix UI">
+      </a>
+      <a href="assets/urbanmatrix2.png" class="lightbox">
+        <img src="assets/urbanmatrix2.png" alt="Matrix Method Results">
+      </a>
+    </div>
+
+    <section class="contact-info">
+      <h2>Want to Know More?</h2>
+      <p>Feel free to reach out or explore the plugin in the QGIS repository.</p>
+      <a href="mailto:crivisan1994@gmail.com" class="contact-btn">Email Me</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cristhian Sanchez</p>
+  </footer>
+</body>
+</html>
+<!-- End of HTML Document -->
